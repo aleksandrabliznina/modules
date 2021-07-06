@@ -1,0 +1,21 @@
+- name: repeatmodeler builddatabase test_repeatmodeler_builddatabase
+  command: nextflow run tests/software/repeatmodeler/builddatabase -entry test_repeatmodeler_builddatabase -c tests/config/nextflow.config
+  tags:
+    - repeatmodeler/builddatabase
+    - repeatmodeler
+  files:
+    - path: output/repeatmodeler/Database/genome.fasta
+      md5sum: 6e9fe4042a72f2345f644f239272b7e6
+    - path: output/repeatmodeler/Database/genome.nhr
+      md5sum: 1a41cb6d0b00c28f62ad60e75ae2f6fc
+    - path: output/repeatmodeler/Database/genome.nin
+    - path: output/repeatmodeler/Database/genome.nnd
+      md5sum: 2002e13acf59079a1a5782c918894579
+    - path: output/repeatmodeler/Database/genome.nni
+      md5sum: 26a954ba0fd80983b550d8f6b8b35ff8
+    - path: output/repeatmodeler/Database/genome.nog
+      md5sum: 30896f123998e926ea2237b89091e7fe
+    - path: output/repeatmodeler/Database/genome.nsq
+      md5sum: 982cbc7d9e38743b9b1037588862b9da
+    - path: output/repeatmodeler/Database/genome.translation
+      md5sum: ccbb119522c09daa976a9015ba999329
