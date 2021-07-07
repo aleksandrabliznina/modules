@@ -30,11 +30,14 @@ process REPEATMODELER_BUILDDATABASE {
     def prefix   = options.suffix ? "${meta.id}${options.suffix}" : "${meta.id}"
     """
     mkdir Database
+
     BuildDatabase \\
         $options.args \\
-        -name ${fasta.baseName} \\
+        -name ${prefix} \\
         $fasta
-    mv ${fasta.baseName}* Database
+
+    mv ${prefix}* Database
+
     echo \$(RepeatModeler --version 2>&1) | sed 's/RepeatModeler version //' > ${software}.version.txt
     """
 }
