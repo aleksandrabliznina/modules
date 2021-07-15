@@ -4,16 +4,16 @@
     - repeatmodeler/builddatabase
     - repeatmodeler
   files:
-    - path: output/repeatmodeler/Database/test.nhr
+    - path: output/repeatmodeler/Database.test/test.nhr
       md5sum: 1a41cb6d0b00c28f62ad60e75ae2f6fc
-    - path: output/repeatmodeler/Database/test.nin
-    - path: output/repeatmodeler/Database/test.nnd
+    - path: output/repeatmodeler/Database.test/test.nin
+    - path: output/repeatmodeler/Database.test/test.nnd
       md5sum: 2002e13acf59079a1a5782c918894579
     - path: output/repeatmodeler/Database/test.nni
       md5sum: 26a954ba0fd80983b550d8f6b8b35ff8
-    - path: output/repeatmodeler/Database/test.nog
+    - path: output/repeatmodeler/Database.test/test.nog
       md5sum: 30896f123998e926ea2237b89091e7fe
     - path: output/repeatmodeler/Database/test.nsq
       md5sum: 982cbc7d9e38743b9b1037588862b9da
-    - path: output/repeatmodeler/Database/test.translation
+    - path: output/repeatmodeler/Database.test/test.translation
       md5sum: ccbb119522c09daa976a9015ba999329
