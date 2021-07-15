@@ -22,21 +22,21 @@ process REPEATMODELER_BUILDDATABASE {
     tuple val(meta), path(fasta)
 
     output:
-    tuple val(meta), path("Database"), emit: db
-    path "*.version.txt"             , emit: version
+    tuple val(meta), path("Database.${meta.id}"), emit: db
+    path "*.version.txt"                        , emit: version
 
     script:
     def software = getSoftwareName(task.process)
     def prefix   = options.suffix ? "${meta.id}${options.suffix}" : "${meta.id}"
     """
-    mkdir Database
+    mkdir Database.${meta.id}
 
     BuildDatabase \\
         $options.args \\
         -name ${prefix} \\
         $fasta
 
-    mv ${prefix}* Database
+    mv ${prefix}* Database.${meta.id}
 
     echo \$(RepeatModeler --version 2>&1) | sed 's/RepeatModeler version //' > ${software}.version.txt
     """
